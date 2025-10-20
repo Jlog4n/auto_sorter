@@ -1,0 +1,13 @@
+site_name: Docs for auto_sorter
+site_author: jeylogan
+nav:
+  - MAIN: index.md
+  - DOCUMENTATIONS:
+    - Quick start: guide/README.md
+    - DOCS IN ENGLISH:
+      - FOR PRIMITIVE: auto_sorter_en/auto_sorter_for_beg.md
+      - FOR ADVANCED: auto_sorter_en/auto_sorter_for_dev.md
+    - DOCS FOR RUSSIAN:
+      - FOR PRIMITIVE: auto_sorter_ru/auto_sorter_for_beg.md
+      - FOR ADVANCED: auto_sorter_ru/auto_sorter_for_dev.md
+
