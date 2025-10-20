@@ -1,7 +1,7 @@
 Target Audience
 This API documentation is intended for developers who want to understand the script's structure and logic for potential modification or integration. The description will be technical but with explanations of key concepts.
 
-==IMPORTANT!== If you need a beginner-friendly explanation, go to (link to beginner documentation here).
+==IMPORTANT!== If you need a beginner-friendly explanation, go to beginner doc.
 
 Script Purpose
 The script serves to sort files of different extensions into their corresponding directories.
