@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="jeylogan">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>FOR ADVANCED - Docs for auto_sorter</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Docs for auto_sorter</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">MAIN</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">DOCUMENTATIONS</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../guide/" class="dropdown-item">Quick start</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DOCS IN ENGLISH</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../auto_sorter_en/auto_sorter_for_beg/" class="dropdown-item">FOR PRIMITIVE</a>
+</li>
+            
+<li>
+    <a href="../../auto_sorter_en/auto_sorter_for_dev/" class="dropdown-item">FOR ADVANCED</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">DOCS FOR RUSSIAN</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../auto_sorter_for_beg/" class="dropdown-item">FOR PRIMITIVE</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">FOR ADVANCED</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../auto_sorter_for_beg/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Для кого предназначена документация?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_2" class="nav-link">Что делает скрипт?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_3" class="nav-link">Логика скрипта</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_4" class="nav-link">Совместимость систем</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#linux" class="nav-link">Код для Linux систем:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#api" class="nav-link">Архитектура API (Построчный разбор)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_5" class="nav-link">Логика переменных</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#mkdir-p" class="nav-link">Команда mkdir -p</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_6" class="nav-link">Цикл и проверка</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#case" class="nav-link">Конструкция case</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#macos" class="nav-link">Код для MacOS систем:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Для кого предназначена документация?</h1>
+<p>Данная API документация предназначено для разработчиков, которые хотят понять структуру и логику скрипта для возможной модификации или интеграции. Описание будет техническим, но с пояснениями ключевых моментов.</p>
+<p>==ВАЖНО!== Если вы хотите подробное объяснение для начинающих, перейдите в раздел документации для начинающих.</p>
+<h1 id="_2">Что делает скрипт?</h1>
+<p>Скрипт служит сортированием файлов разных расширений в соответствующие им директории.</p>
+<h1 id="_3">Логика скрипта</h1>
+<ol>
+<li>
+<p><strong>Инициализация путей</strong> - Определяются исходная директория (<code>Source_dir</code>) и целевые директории для разных типов файлов</p>
+</li>
+<li>
+<p><strong>Создание директорий</strong> - Проверяется существование целевых папок, при отсутствии - создаются</p>
+</li>
+<li>
+<p><strong>Цикл обработки файлов</strong> - Для каждого файла в исходной директории:- Определяется расширение файла</p>
+</li>
+<li>
+<p>Выполняется классификация по следующим типам:
+   <strong>Изображения</strong> (.jpg, .jpeg, .png, .gif, .bmp)
+   <strong>Видео</strong> (.mp4, .avi, .mkv, .wmv, .flv)
+   <strong>Документы</strong> (.pdf, .doc, .docx, .txt, .rtf, .xls, .xlsx, .ppt, .pptx)</p>
+</li>
+</ol>
+<p><strong>Аудио</strong> (.mp3, .wav, .aac, .ogg)
+   <strong>Архивы</strong> (.zip, .rar, .tar)
+   ==Файлы перемещаются в соответствующие целевые директории==</p>
+<ol>
+<li><strong>Завершение</strong> - Выводится сообщение об успешном завершении сортировки</li>
+</ol>
+<h1 id="_4">Совместимость систем</h1>
+<p><strong>Скрипт предназначен для:
+* </strong>Linux<strong>
+* </strong>MacOS**
+Стоит сказать, что код, между этими двумя ОС, будет отличаться только путями. Для начало сделаем разбор для Linux, после уже для MacOS.</p>
+<hr />
+<h1 id="linux">Код для Linux систем:</h1>
+<pre><code class="language-bash">#!/bin/bash
+Source_dir=&quot;/home/username/Downloads&quot; # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ ВМЕСТО `username`!!!
+Result_picture=&quot;/home/username/picture&quot;  # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ ВМЕСТО `username`!!!
+Result_video=&quot;/home/username/video&quot; # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ ВМЕСТО `username`!!!
+Result_music=&quot;/home/username/music&quot; # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ ВМЕСТО `username`!!!
+Result_documents=&quot;/home/username/documents&quot; # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ ВМЕСТО `username`!!!
+Result_archives=&quot;/home/username/archives&quot; # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ ВМЕСТО `username`!!!
+
+echo &quot;Creating directories&quot;
+mkdir -p &quot;$Result_picture&quot; &quot;$Result_video&quot; &quot;$Result_documents&quot; &quot;$Result_music&quot; &quot;$Result_archives&quot;
+sleep 1
+
+for file in &quot;$Source_dir&quot;/*; do
+if [ -f &quot;$file&quot; ]; then
+filename=$(basename &quot;$file&quot;)
+
+case &quot;$filename&quot; in
+*.jpg|*.jpeg|*.png|*.gif|*.bmp)
+echo &quot;Moving $filename to picture directory&quot;
+mv &quot;$file&quot; &quot;$Result_picture&quot;
+;;
+*.mp4|*.avi|*.mkv|*.wmv|*.flv)
+echo &quot;Moving $filename to video directory&quot;
+mv &quot;$file&quot; &quot;$Result_video&quot;
+;;
+*.pdf|*.doc|*.docx|*.txt|*.rtf|*.xls|*.xlsx|*.ppt|*.pptx)
+echo &quot;Moving $filename to document directory&quot;
+mv &quot;$file&quot; &quot;$Result_documents&quot;
+;;
+*.mp3|*.wav|*.aac|*.ogg)
+echo &quot;Moving $filename to music directory&quot;
+mv &quot;$file&quot; &quot;$Result_music&quot;
+;;
+*.zip|*.rar|*.tar)
+echo &quot;Moving $filename to archive directory&quot;
+mv &quot;$file&quot; &quot;$Result_archives&quot;
+;;
+*)
+echo &quot;Something went wrong...&quot;
+esac
+fi
+done
+echo &quot;File sorting was successfully completed.&quot;
+</code></pre>
+<h1 id="api">Архитектура API (Построчный разбор)</h1>
+<hr />
+<h1 id="_5">Логика переменных</h1>
+<p>Инициализируем целевую переменную <code>Source_dir</code> и объявляем её как путь к директории <code>Downloads</code>.</p>
+<pre><code class="language-bash">Source_dir=&quot;/home/username/Downloads&quot;
+</code></pre>
+<p>Именно из этой перемены мы будем брать файлы и распределять их по следующим директориям:
+1. Целевая директория <code>picture</code> - приемник изображений
+2. Целевая директория <code>video</code> - приемник видео
+3. Целевая директория <code>music</code> - приемник аудио
+4. Целевая директория <code>documents</code> - приемник документов
+5. Целевая директория <code>archives</code> - приемник архивов</p>
+<h1 id="mkdir-p">Команда mkdir -p</h1>
+<pre><code class="language-bash">mkdir -p &quot;$Result_picture&quot; &quot;$Result_video&quot; &quot;$Result_documents&quot; &quot;$Result_music&quot; &quot;$Result_archives&quot;
+</code></pre>
+<p><strong>Назначение:</strong> Рекурсивное создание директорий по соответствующим переменным.
+<strong>Флаг:</strong> <code>-p</code> - создание цепочки директорий.</p>
+<h1 id="_6">Цикл и проверка</h1>
+<h3 id="for-file-in-source_dir">Цикл: <code>for file in "$Source_dir"/*</code></h3>
+<pre><code class="language-bash">for file in &quot;$Source_dir&quot;/*; do
+</code></pre>
+<p><strong>Назначение:</strong> перебор элементов исходной директории</p>
+<h3 id="if-f-file">Условие: <code>if [ -f "$file" ]</code></h3>
+<pre><code class="language-bash">if [ -f &quot;$file&quot; ]; then
+</code></pre>
+<p><strong>Тип:</strong> проверка типа элемента
+<strong>Флаг:</strong> <code>-f</code> - проверка на файл
+<strong>Возврат:</strong> boolean (0 - файл, 1 - не файл)</p>
+<p>Если <code>$file</code> == 0, выполни следующее:</p>
+<pre><code class="language-bash">filename=$(basename &quot;$file&quot;)
+</code></pre>
+<h4 id="basename">функция <code>basename</code>:</h4>
+<p><strong>Назначение:</strong> извлечение имени файла с расширением
+<strong>Вход:</strong> полный путь к файлу
+<strong>Выход:</strong> имя файла с расширением</p>
+<h1 id="case">Конструкция case</h1>
+<p><strong>Тип:</strong> мульти-условный оператор
+<strong>Назначение:</strong> маршрутизация файлов по расширениям</p>
+<pre><code class="language-bash">case &quot;$filename&quot; in
+*.jpg|*.jpeg|*.png|*.gif|*.bmp)
+echo &quot;Moving $filename to picture directory&quot;
+mv &quot;$file&quot; &quot;$Result_picture&quot;
+;;
+*.mp4|*.avi|*.mkv|*.wmv|*.flv)
+echo &quot;Moving $filename to video directory&quot;
+mv &quot;$file&quot; &quot;$Result_video&quot;
+;;
+*.pdf|*.doc|*.docx|*.txt|*.rtf|*.xls|*.xlsx|*.ppt|*.pptx)
+echo &quot;Moving $filename to document directory&quot;
+mv &quot;$file&quot; &quot;$Result_documents&quot;
+;;
+*.mp3|*.wav|*.aac|*.ogg)
+echo &quot;Moving $filename to music directory&quot;
+mv &quot;$file&quot; &quot;$Result_music&quot;
+;;
+*.zip|*.rar|*.tar)
+echo &quot;Moving $filename to archive directory&quot;
+mv &quot;$file&quot; &quot;$Result_archives&quot;
+;;
+*)
+echo &quot;Something went wrong...&quot;
+esac
+</code></pre>
+<h4 id="_7">Классификация:</h4>
+<ul>
+<li><strong>Изображения</strong> (.jpg, .jpeg, .png, .gif, .bmp)</li>
+<li><strong>Видео</strong> (.mp4, .avi, .mkv, .wmv, .flv)</li>
+<li><strong>Документы</strong> (.pdf, .doc, .docx, .txt, .rtf, .xls, .xlsx, .ppt, .pptx)</li>
+<li><strong>Аудио</strong> (.mp3, .wav, .aac, .ogg)</li>
+<li><strong>Архивы</strong> (.zip, .rar, .tar)</li>
+</ul>
+<hr />
+<h1 id="macos">Код для MacOS систем:</h1>
+<pre><code class="language-bash">#!/bin/bash
+Source_dir=&quot;/Users/username/Downloads&quot; # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ!!!
+
+Result_picture=&quot;/Users/username/picture&quot;  # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ!!!
+Result_video=&quot;/Users/username/video&quot;  # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ!!!
+Result_music=&quot;/Users/username/music&quot;  # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ!!!
+Result_documents=&quot;/Users/username/documents&quot;  # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ!!!
+Result_archives=&quot;/Users/username/archives&quot;  # ПОСТАВЬ СВОЁ ИМЯ ПОЛЬЗОВАТЕЛЯ!!!
+
+echo &quot;Creating directories&quot;
+mkdir -p &quot;$Result_picture&quot; &quot;$Result_video&quot; &quot;$Result_documents&quot; &quot;$Result_music&quot; &quot;$Result_archives&quot;
+sleep 1
+
+for file in &quot;$Source_dir&quot;/*; do
+if [ -f &quot;$file&quot; ]; then
+filename=$(basename &quot;$file&quot;)
+
+case &quot;$filename&quot; in
+*.jpg|*.jpeg|*.png|*.gif|*.bmp)
+echo &quot;Moving $filename to picture directory&quot;
+mv &quot;$file&quot; &quot;$Result_picture&quot;
+;;
+*.mp4|*.avi|*.mkv|*.wmv|*.flv)
+echo &quot;Moving $filename to video directory&quot;
+mv &quot;$file&quot; &quot;$Result_video&quot;
+;;
+*.pdf|*.doc|*.docx|*.txt|*.rtf|*.xls|*.xlsx|*.ppt|*.pptx)
+echo &quot;Moving $filename to document directory&quot;
+mv &quot;$file&quot; &quot;$Result_documents&quot;
+;;
+*.mp3|*.wav|*.aac|*.ogg)
+echo &quot;Moving $filename to music directory&quot;
+mv &quot;$file&quot; &quot;$Result_music&quot;
+;;
+*.zip|*.rar|*.tar)
+echo &quot;Moving $filename to archive directory&quot;
+mv &quot;$file&quot; &quot;$Result_archives&quot;
+;;
+*)
+echo &quot;Something went wrong...&quot;
+esac
+fi
+done
+echo &quot;File sorting was successfully completed.&quot;
+</code></pre>
+<p>можешь сделать эту документацию на английском техническом</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
