@@ -17,13 +17,13 @@ A smart Bash script that automatically organizes your Downloads folder by sortin
 
 ## Supported File Types
 
-| Category | File Extensions | Icon |
-|----------|-----------------|------|
-| **Images** 🖼 | `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp` | 📷 |
-| **Documents** 📄 | `.pdf`, `.doc`, `.docx`, `.txt`, `.rtf`, `.xls`, `.xlsx`, `.ppt`, `.pptx`, `.odt` | 📑 |
-| **Audio** 🎵 | `.mp3`, `.wav`, `.aac`, `.ogg` | 🎧 |
-| **Video** 🎥 | `.mp4`, `.avi`, `.mkv`, `.wmv`, `.flv` | 📹 |
-| **Archives** 📦 | `.zip`, `.rar`, `.tar` | 🗜 |
+| Category | File Extensions
+|----------|-----------------
+| **Images** 🖼 | `.jpg`, `.jpeg`, `.png`, `.gif`, `.bmp`
+| **Documents** 📄 | `.pdf`, `.doc`, `.docx`, `.txt`, `.rtf`, `.xls`, `.xlsx`, `.ppt`, `.pptx`, `.odt`
+| **Audio** 🎵 | `.mp3`, `.wav`, `.aac`, `.ogg`
+| **Video** 🎥 | `.mp4`, `.avi`, `.mkv`, `.wmv`, `.flv`
+| **Archives** 📦 | `.zip`, `.rar`, `.tar`
 
 ## Installation
 
